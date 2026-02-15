@@ -1,0 +1,422 @@
+/* MCP Servers (Mockup 11) */
+
+/* Page Header */
+.mcp-page-header {
+  margin-bottom: 24px;
+}
+
+.mcp-page-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #c9d1d9;
+}
+
+.mcp-header-subtitle {
+  color: #8b949e;
+  font-size: 14px;
+}
+
+/* Toolbar */
+.mcp-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.mcp-toolbar-left {
+  display: flex;
+  gap: 12px;
+}
+
+.mcp-toolbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+/* Server Grid */
+.mcp-servers-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.mcp-server-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.mcp-server-card:hover {
+  border-color: #1f6feb;
+}
+
+/* Server Header */
+.mcp-server-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.mcp-server-info {
+  flex: 1;
+}
+
+.mcp-server-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #c9d1d9;
+}
+
+.mcp-server-url {
+  font-size: 12px;
+  color: #8b949e;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+}
+
+/* Server Status */
+.mcp-server-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.mcp-status-connected {
+  background: rgba(35, 134, 54, 0.15);
+  color: #3fb950;
+}
+
+.mcp-status-error {
+  background: rgba(248, 81, 73, 0.15);
+  color: #f85149;
+}
+
+.mcp-status-disconnected {
+  background: rgba(139, 148, 158, 0.15);
+  color: #8b949e;
+}
+
+.mcp-status-connecting {
+  background: rgba(31, 111, 235, 0.15);
+  color: #58a6ff;
+}
+
+/* Server Tools Section */
+.mcp-server-tools {
+  margin-bottom: 16px;
+}
+
+.mcp-tools-label {
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mcp-tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mcp-tool-badge {
+  padding: 4px 10px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #8b949e;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+}
+
+/* Server Metadata */
+.mcp-server-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 16px;
+}
+
+.mcp-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Server Actions */
+.mcp-server-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #30363d;
+}
+
+.mcp-action-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.mcp-action-btn:hover {
+  background: #21262d;
+}
+
+.mcp-action-btn.primary {
+  background: rgba(35, 134, 54, 0.15);
+  color: #3fb950;
+  border-color: rgba(35, 134, 54, 0.3);
+}
+
+.mcp-action-btn.primary:hover {
+  background: rgba(35, 134, 54, 0.25);
+}
+
+.mcp-action-btn.danger {
+  background: rgba(218, 54, 51, 0.15);
+  color: #f85149;
+  border-color: rgba(218, 54, 51, 0.3);
+}
+
+.mcp-action-btn.danger:hover {
+  background: rgba(218, 54, 51, 0.25);
+}
+
+/* Server Logs/Output */
+.mcp-server-logs {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  color: #8b949e;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.mcp-log-entry {
+  padding: 2px 0;
+  line-height: 1.5;
+}
+
+.mcp-log-entry.error {
+  color: #f85149;
+}
+
+.mcp-log-entry.warn {
+  color: #d29922;
+}
+
+.mcp-log-entry.info {
+  color: #58a6ff;
+}
+
+/* Stats Cards */
+.mcp-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mcp-stat-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.mcp-stat-label {
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mcp-stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #c9d1d9;
+}
+
+.mcp-stat-change {
+  font-size: 12px;
+  color: #8b949e;
+  margin-top: 4px;
+}
+
+/* Add Server Form */
+.mcp-add-form {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.mcp-form-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #c9d1d9;
+}
+
+.mcp-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mcp-form-grid.single {
+  grid-template-columns: 1fr;
+}
+
+.mcp-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mcp-form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+.mcp-form-input,
+.mcp-form-select,
+.mcp-form-textarea {
+  padding: 10px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.mcp-form-input:focus,
+.mcp-form-select:focus,
+.mcp-form-textarea:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+.mcp-form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+}
+
+.mcp-form-hint {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+.mcp-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Empty State */
+.mcp-empty-state {
+  padding: 64px 32px;
+  text-align: center;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+}
+
+.mcp-empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.mcp-empty-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c9d1d9;
+  margin-bottom: 8px;
+}
+
+.mcp-empty-text {
+  font-size: 14px;
+  color: #8b949e;
+  margin-bottom: 24px;
+}
+
+/* Connection Test */
+.mcp-connection-test {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.mcp-test-result {
+  font-size: 12px;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+  color: #8b949e;
+}
+
+.mcp-test-result.success {
+  color: #3fb950;
+}
+
+.mcp-test-result.error {
+  color: #f85149;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mcp-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mcp-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mcp-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .mcp-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .mcp-server-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mcp-server-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
