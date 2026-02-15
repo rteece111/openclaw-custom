@@ -1,0 +1,457 @@
+/* Enhanced Agents View (Mockup 05) */
+
+/* Agent List Sidebar */
+.agents-sidebar {
+  background: #161b22;
+  border-right: 1px solid #30363d;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.agents-sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #30363d;
+}
+
+.agents-sidebar-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #c9d1d9;
+}
+
+.agents-sidebar-subtitle {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+.agent-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.agent-item {
+  padding: 12px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 3px solid transparent;
+}
+
+.agent-item:hover {
+  background: #1c2128;
+}
+
+.agent-item.active {
+  background: #1c2128;
+  border-left-color: #1f6feb;
+}
+
+.agent-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.agent-info {
+  flex: 1;
+}
+
+.agent-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #c9d1d9;
+}
+
+.agent-role {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+.agent-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #238636;
+  flex-shrink: 0;
+}
+
+.agent-status.offline {
+  background: #8b949e;
+}
+
+/* Agent Main Content */
+.agent-main-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.agent-content-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid #30363d;
+  background: #161b22;
+}
+
+.agent-content-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #c9d1d9;
+}
+
+.agent-content-subtitle {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+.agent-content-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+/* Configuration Sections */
+.config-section {
+  margin-bottom: 32px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c9d1d9;
+}
+
+.section-title-icon {
+  font-size: 18px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #c9d1d9;
+}
+
+.form-hint {
+  display: block;
+  font-size: 12px;
+  color: #8b949e;
+  margin-top: 4px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 14px;
+  font-family: "Monaco", "Consolas", monospace;
+  resize: vertical;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+/* Toggle Switches */
+.toggle-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.toggle-group:last-child {
+  margin-bottom: 0;
+}
+
+.toggle-info h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #c9d1d9;
+}
+
+.toggle-info p {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+.toggle-switch {
+  width: 44px;
+  height: 24px;
+  background: #30363d;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle-switch.active {
+  background: #238636;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  top: 3px;
+  left: 3px;
+  transition: left 0.2s;
+}
+
+.toggle-switch.active::after {
+  left: 23px;
+}
+
+/* Badge Lists */
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  padding: 6px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c9d1d9;
+}
+
+.badge-remove {
+  cursor: pointer;
+  color: #8b949e;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.badge-remove:hover {
+  color: #f85149;
+}
+
+/* Agent Files Section */
+.agent-files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-card {
+  padding: 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.file-card:hover {
+  background: #161b22;
+  border-color: #1f6feb;
+}
+
+.file-card-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon {
+  font-size: 20px;
+}
+
+.file-details {
+  flex: 1;
+}
+
+.file-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #c9d1d9;
+}
+
+.file-meta {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.file-action-btn {
+  padding: 6px 12px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.file-action-btn:hover {
+  background: #30363d;
+}
+
+/* Action Buttons */
+.agent-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #30363d;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #238636;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2ea043;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #30363d;
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  background: #da3633;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-danger:hover {
+  background: #f85149;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .agents-sidebar {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .agents-sidebar {
+    position: absolute;
+    left: -280px;
+    z-index: 10;
+    height: 100%;
+    transition: left 0.3s;
+  }
+
+  .agents-sidebar.visible {
+    left: 0;
+  }
+
+  .agent-content-body {
+    padding: 24px 16px;
+  }
+}
