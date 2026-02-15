@@ -1,0 +1,248 @@
+/* Dashboard Home Styles */
+.dashboard-home {
+  padding: 0;
+}
+
+.status-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.status-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.status-label {
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.status-value.green {
+  color: #238636;
+}
+
+.status-value.blue {
+  color: #1f6feb;
+}
+
+.status-value.yellow {
+  color: #d29922;
+}
+
+.status-value.warn {
+  color: #da3633;
+}
+
+.status-change {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+/* Content Panels */
+.panel-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.panel {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.panel-action {
+  font-size: 12px;
+  color: #58a6ff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.panel-action:hover {
+  color: #79c0ff;
+}
+
+.panel-body {
+  padding: 16px 20px;
+}
+
+/* Activity Items */
+.activity-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #21262d;
+  display: flex;
+  gap: 12px;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #c9d1d9;
+}
+
+.activity-meta {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+/* Agent Cards */
+.agent-card {
+  padding: 12px;
+  background: #0d1117;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.agent-card:hover {
+  background: #161b22;
+}
+
+.agent-card:last-child {
+  margin-bottom: 0;
+}
+
+.agent-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.agent-info {
+  flex: 1;
+}
+
+.agent-name {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #c9d1d9;
+}
+
+.agent-status {
+  font-size: 11px;
+  color: #8b949e;
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #238636;
+  margin-right: 4px;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.quick-action {
+  padding: 16px;
+  background: #0d1117;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.quick-action:hover {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+.action-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.action-label {
+  font-size: 12px;
+  color: #c9d1d9;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .status-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .panel-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-row {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}
