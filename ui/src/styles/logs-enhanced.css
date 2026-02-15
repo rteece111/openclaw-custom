@@ -1,0 +1,376 @@
+/* Enhanced Logs Viewer (Mockup 09) */
+
+.logs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+}
+
+/* Logs Header */
+.logs-header-enhanced {
+  padding: 16px 24px;
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161b22;
+  gap: 16px;
+}
+
+.logs-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.logs-title {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #c9d1d9;
+}
+
+/* Filter Group */
+.logs-filter-group {
+  display: flex;
+  gap: 8px;
+}
+
+.logs-filter-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: all 0.2s;
+}
+
+.logs-filter-btn:hover {
+  background: #21262d;
+  color: #c9d1d9;
+}
+
+.logs-filter-btn.active {
+  background: #1f6feb;
+  color: white;
+  border-color: #1f6feb;
+}
+
+/* Header Actions */
+.logs-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.logs-action-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: all 0.2s;
+}
+
+.logs-action-btn:hover {
+  background: #21262d;
+}
+
+.logs-action-btn.primary {
+  background: #238636;
+  border-color: #238636;
+  color: white;
+}
+
+.logs-action-btn.primary:hover {
+  background: #2ea043;
+}
+
+/* Logs Body */
+.logs-body {
+  flex: 1;
+  overflow-y: auto;
+  background: #0d1117;
+  padding: 12px 16px;
+}
+
+/* Log Entries */
+.log-entry {
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #161b22;
+  transition: background 0.1s;
+}
+
+.log-entry:hover {
+  background: #161b22;
+}
+
+.log-time {
+  color: #8b949e;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.log-level {
+  min-width: 50px;
+  font-weight: 600;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.log-level.info {
+  color: #58a6ff;
+}
+
+.log-level.warn {
+  color: #d29922;
+}
+
+.log-level.error {
+  color: #f85149;
+}
+
+.log-level.debug {
+  color: #8b949e;
+}
+
+.log-level.trace {
+  color: #6e7681;
+}
+
+.log-source {
+  color: #79c0ff;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.log-message {
+  flex: 1;
+  color: #c9d1d9;
+  word-break: break-word;
+}
+
+/* Log Entry States */
+.log-entry.error-entry {
+  border-left: 3px solid #f85149;
+  background: rgba(248, 81, 73, 0.05);
+}
+
+.log-entry.warn-entry {
+  border-left: 3px solid #d29922;
+  background: rgba(210, 153, 34, 0.05);
+}
+
+/* Log Stats Bar */
+.logs-stats-bar {
+  padding: 12px 24px;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.log-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.log-stat-label {
+  color: #8b949e;
+}
+
+.log-stat-value {
+  color: #c9d1d9;
+  font-weight: 600;
+}
+
+.log-stat-value.error {
+  color: #f85149;
+}
+
+.log-stat-value.warn {
+  color: #d29922;
+}
+
+.log-stat-value.info {
+  color: #58a6ff;
+}
+
+/* Search Box */
+.logs-search-box {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.logs-search-input {
+  width: 100%;
+  padding: 6px 12px 6px 32px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #c9d1d9;
+  font-size: 12px;
+  font-family: "Monaco", "Menlo", "Consolas", monospace;
+}
+
+.logs-search-input:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+.logs-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8b949e;
+  pointer-events: none;
+}
+
+/* Auto-scroll Toggle */
+.logs-autoscroll-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #8b949e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: all 0.2s;
+}
+
+.logs-autoscroll-toggle.active {
+  background: rgba(35, 134, 54, 0.15);
+  border-color: rgba(35, 134, 54, 0.3);
+  color: #3fb950;
+}
+
+.logs-autoscroll-toggle:hover {
+  background: #21262d;
+}
+
+/* Empty State */
+.logs-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.logs-empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.logs-empty-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c9d1d9;
+  margin-bottom: 8px;
+}
+
+.logs-empty-text {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+/* Log Detail Expansion */
+.log-detail {
+  padding: 12px 16px;
+  background: #161b22;
+  border-left: 3px solid #1f6feb;
+  margin: 4px 0;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.log-detail-header {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.log-detail-content {
+  color: #8b949e;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Scrollbar */
+.logs-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.logs-body::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.logs-body::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 5px;
+}
+
+.logs-body::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .logs-header-enhanced {
+    flex-wrap: wrap;
+  }
+
+  .logs-search-box {
+    max-width: 100%;
+    order: 3;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logs-filter-group {
+    flex-wrap: wrap;
+  }
+
+  .logs-stats-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .log-entry {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .log-time,
+  .log-level,
+  .log-source {
+    min-width: auto;
+  }
+}
