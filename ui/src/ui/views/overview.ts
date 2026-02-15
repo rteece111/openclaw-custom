@@ -1,8 +1,7 @@
 import { html } from "lit";
 import type { GatewayHelloOk } from "../gateway.ts";
 import type { UiSettings } from "../storage.ts";
-import { formatRelativeTimestamp, formatDurationHuman } from "../format.ts";
-import { formatNextRun } from "../presenter.ts";
+import { formatDurationHuman } from "../format.ts";
 
 export type OverviewProps = {
   connected: boolean;
@@ -27,7 +26,6 @@ export function renderOverview(props: OverviewProps) {
     | { uptimeMs?: number; policy?: { tickIntervalMs?: number } }
     | undefined;
   const uptime = snapshot?.uptimeMs ? formatDurationHuman(snapshot.uptimeMs) : "n/a";
-  const tick = snapshot?.policy?.tickIntervalMs ? `${snapshot.policy.tickIntervalMs}ms` : "n/a";
 
   // Calculate some demo metrics (we'll replace with real data later)
   const activeAgents = 4;
