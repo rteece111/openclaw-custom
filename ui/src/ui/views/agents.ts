@@ -544,11 +544,11 @@ export function renderAgents(props: AgentsProps) {
 
   return html`
     <div class="agents-layout">
-      <section class="card agents-sidebar">
+      <section class="agents-sidebar">
         <div class="row" style="justify-content: space-between;">
           <div>
-            <div class="card-title">Agents</div>
-            <div class="card-sub">${agents.length} configured.</div>
+            <div class="agents-sidebar-title">Agents</div>
+            <div class="agents-sidebar-subtitle">${agents.length} configured.</div>
           </div>
           <button class="btn btn--sm" ?disabled=${props.loading} @click=${props.onRefresh}>
             ${props.loading ? "Loading…" : "Refresh"}
@@ -571,15 +571,15 @@ export function renderAgents(props: AgentsProps) {
                   return html`
                     <button
                       type="button"
-                      class="agent-row ${selectedId === agent.id ? "active" : ""}"
+                      class="agent-item ${selectedId === agent.id ? "active" : ""}"
                       @click=${() => props.onSelectAgent(agent.id)}
                     >
                       <div class="agent-avatar">
                         ${emoji || normalizeAgentLabel(agent).slice(0, 1)}
                       </div>
                       <div class="agent-info">
-                        <div class="agent-title">${normalizeAgentLabel(agent)}</div>
-                        <div class="agent-sub mono">${agent.id}</div>
+                        <div class="agent-name">${normalizeAgentLabel(agent)}</div>
+                        <div class="agent-role">${agent.id}</div>
                       </div>
                       ${badge ? html`<span class="agent-pill">${badge}</span>` : nothing}
                     </button>
@@ -588,7 +588,7 @@ export function renderAgents(props: AgentsProps) {
           }
         </div>
       </section>
-      <section class="agents-main">
+      <section class="agent-main-content">
         ${
           !selectedAgent
             ? html`
