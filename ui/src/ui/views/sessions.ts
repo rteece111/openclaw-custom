@@ -188,8 +188,8 @@ export function renderSessions(props: SessionsProps) {
         ${props.result ? `Store: ${props.result.path}` : ""}
       </div>
 
-      <div class="table" style="margin-top: 16px;">
-        <div class="table-head">
+      <div class="sessions-table" style="margin-top: 16px;">
+        <div class="sessions-table-head">
           <div>Key</div>
           <div>Label</div>
           <div>Kind</div>
@@ -242,7 +242,7 @@ function renderRow(
     : null;
 
   return html`
-    <div class="table-row">
+    <div class="session-row">
       <div class="mono session-key-cell">
         ${canLink ? html`<a href=${chatUrl} class="session-link">${row.key}</a>` : row.key}
         ${showDisplayName ? html`<span class="muted session-key-display-name">${displayName}</span>` : nothing}
