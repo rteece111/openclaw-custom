@@ -1,0 +1,417 @@
+/* Enhanced System Settings/Config (Mockup 07) */
+
+/* Settings Page Header */
+.config-page-header {
+  margin-bottom: 32px;
+}
+
+.config-page-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #c9d1d9;
+}
+
+.config-header-subtitle {
+  color: #8b949e;
+  font-size: 14px;
+}
+
+/* Settings Grid */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.settings-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Card Header */
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #30363d;
+}
+
+.settings-card-icon {
+  font-size: 24px;
+}
+
+.settings-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+/* Setting Rows */
+.setting-row {
+  padding: 12px 0;
+  border-bottom: 1px solid #21262d;
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.setting-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+.setting-value {
+  font-size: 13px;
+  color: #8b949e;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+.setting-desc {
+  font-size: 12px;
+  color: #8b949e;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-ok {
+  background: rgba(35, 134, 54, 0.15);
+  color: #3fb950;
+}
+
+.status-warn {
+  background: rgba(210, 153, 34, 0.15);
+  color: #d29922;
+}
+
+.status-error {
+  background: rgba(248, 81, 73, 0.15);
+  color: #f85149;
+}
+
+.status-offline {
+  background: rgba(139, 148, 158, 0.15);
+  color: #8b949e;
+}
+
+/* Action Buttons */
+.setting-action-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid #30363d;
+  background: transparent;
+  color: #c9d1d9;
+  transition: all 0.2s;
+}
+
+.setting-action-btn:hover {
+  background: #21262d;
+}
+
+.setting-action-btn.primary {
+  background: rgba(35, 134, 54, 0.15);
+  color: #3fb950;
+  border-color: rgba(35, 134, 54, 0.3);
+}
+
+.setting-action-btn.primary:hover {
+  background: rgba(35, 134, 54, 0.25);
+}
+
+.setting-action-btn.danger {
+  background: rgba(218, 54, 51, 0.15);
+  color: #f85149;
+  border-color: rgba(218, 54, 51, 0.3);
+}
+
+.setting-action-btn.danger:hover {
+  background: rgba(218, 54, 51, 0.25);
+}
+
+/* System Stats Cards */
+.system-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.system-stat-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.system-stat-label {
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.system-stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #c9d1d9;
+  margin-bottom: 4px;
+}
+
+.system-stat-unit {
+  font-size: 14px;
+  color: #8b949e;
+  font-weight: normal;
+}
+
+.system-stat-change {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+/* Progress Bars */
+.setting-progress {
+  margin-top: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #21262d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #238636;
+  transition: width 0.3s;
+}
+
+.progress-fill.warn {
+  background: #d29922;
+}
+
+.progress-fill.error {
+  background: #f85149;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8b949e;
+  margin-top: 4px;
+}
+
+/* Toggle Switches (for settings) */
+.setting-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-switch-setting {
+  width: 44px;
+  height: 24px;
+  background: #30363d;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-switch-setting.active {
+  background: #238636;
+}
+
+.toggle-switch-setting::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  top: 3px;
+  left: 3px;
+  transition: left 0.2s;
+}
+
+.toggle-switch-setting.active::after {
+  left: 23px;
+}
+
+/* Input Fields */
+.setting-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 13px;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.setting-input:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+.setting-select {
+  width: 100%;
+  padding: 8px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Key-Value Lists */
+.setting-kv-list {
+  margin-top: 8px;
+}
+
+.kv-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 12px;
+  border-bottom: 1px solid #21262d;
+}
+
+.kv-item:last-child {
+  border-bottom: none;
+}
+
+.kv-key {
+  color: #8b949e;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+.kv-value {
+  color: #c9d1d9;
+  font-family: "Monaco", "Consolas", monospace;
+}
+
+/* Badge Lists */
+.setting-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.setting-badge {
+  padding: 4px 8px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #8b949e;
+}
+
+/* Alert Banners */
+.config-alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.config-alert-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.config-alert.info {
+  background: rgba(31, 111, 235, 0.15);
+  border: 1px solid rgba(31, 111, 235, 0.3);
+  color: #58a6ff;
+}
+
+.config-alert.warn {
+  background: rgba(210, 153, 34, 0.15);
+  border: 1px solid rgba(210, 153, 34, 0.3);
+  color: #d29922;
+}
+
+.config-alert.error {
+  background: rgba(218, 54, 51, 0.15);
+  border: 1px solid rgba(218, 54, 51, 0.3);
+  color: #f85149;
+}
+
+.config-alert.success {
+  background: rgba(35, 134, 54, 0.15);
+  border: 1px solid rgba(35, 134, 54, 0.3);
+  color: #3fb950;
+}
+
+/* Footer Actions */
+.config-footer-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid #30363d;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .system-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .system-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .setting-label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
