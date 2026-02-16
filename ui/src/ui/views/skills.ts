@@ -146,12 +146,12 @@ function renderSkill(skill: SkillStatusEntry, props: SkillsProps) {
     reasons.push("blocked by allowlist");
   }
   return html`
-    <div class="list-item">
-      <div class="list-main">
-        <div class="list-title">
+    <div class="skill-card">
+      <div class="skill-card-body">
+        <div class="skill-name">
           ${skill.emoji ? `${skill.emoji} ` : ""}${skill.name}
         </div>
-        <div class="list-sub">${clampText(skill.description, 140)}</div>
+        <div class="skill-description">${clampText(skill.description, 140)}</div>
         <div class="chip-row" style="margin-top: 6px;">
           <span class="chip">${skill.source}</span>
           ${
