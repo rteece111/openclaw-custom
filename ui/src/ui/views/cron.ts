@@ -65,7 +65,7 @@ export function renderCron(props: CronProps) {
       <div class="card">
         <div class="card-title">Scheduler</div>
         <div class="card-sub">Gateway-owned cron scheduler status.</div>
-        <div class="stat-grid" style="margin-top: 16px;">
+        <div class="cron-stats-grid" style="margin-top: 16px;">
           <div class="stat">
             <div class="stat-label">Enabled</div>
             <div class="stat-value">
@@ -92,7 +92,7 @@ export function renderCron(props: CronProps) {
       <div class="card">
         <div class="card-title">New Job</div>
         <div class="card-sub">Create a scheduled wakeup or agent run.</div>
-        <div class="form-grid" style="margin-top: 16px;">
+        <div class="cron-form-grid" style="margin-top: 16px;">
           <label class="field">
             <span>Name</span>
             <input
@@ -144,7 +144,7 @@ export function renderCron(props: CronProps) {
           </label>
         </div>
         ${renderScheduleFields(props)}
-        <div class="form-grid" style="margin-top: 12px;">
+        <div class="cron-form-grid" style="margin-top: 12px;">
           <label class="field">
             <span>Session</span>
             <select
@@ -201,7 +201,7 @@ export function renderCron(props: CronProps) {
         ${
           props.form.payloadKind === "agentTurn"
             ? html`
-                <div class="form-grid" style="margin-top: 12px;">
+                <div class="cron-form-grid" style="margin-top: 12px;">
                   <label class="field">
                     <span>Delivery</span>
                     <select
@@ -329,7 +329,7 @@ function renderScheduleFields(props: CronProps) {
   }
   if (form.scheduleKind === "every") {
     return html`
-      <div class="form-grid" style="margin-top: 12px;">
+      <div class="cron-form-grid" style="margin-top: 12px;">
         <label class="field">
           <span>Every</span>
           <input
@@ -358,7 +358,7 @@ function renderScheduleFields(props: CronProps) {
     `;
   }
   return html`
-    <div class="form-grid" style="margin-top: 12px;">
+    <div class="cron-form-grid" style="margin-top: 12px;">
       <label class="field">
         <span>Expression</span>
         <input
